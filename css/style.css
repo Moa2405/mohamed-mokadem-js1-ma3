@@ -4,13 +4,14 @@
 
 }
 
+
 .loader {
-    border: 16px solid rgb(132, 42, 191);
-    border-top: 16px solid rgba(132, 42, 191, 0.5);
+    border: 16px solid rgba(132, 42, 191, 0.5);
+    border-top: 16px solid rgb(132, 42, 191);
     border-radius: 50%;
     width: 50px;
     height: 50px;
-    animation: spinner 2s ease-in infinite;
+    animation: spinner 1.5s infinite;
 }
 
 @keyframes spinner {
@@ -32,7 +33,5 @@
     background-color: rgba(132, 42, 191, 0.1);
     border: solid rgb(132, 42, 191);
     border-radius: 6px;
-    /* padding: 16px; */
-    /* margin: 20px; */
     width: 200px;
 }

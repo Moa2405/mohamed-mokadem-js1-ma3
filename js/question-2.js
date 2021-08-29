@@ -1,7 +1,7 @@
-const gamesContainer = document.querySelector(".games-container")
+const gamesContainer = document.querySelector(".games-container");
 
 const api = "https://api.rawg.io/api/games?dates=2019-01-01,2019-12-31&ordering=-rating&key=";
-const apiKey = "cd89f6986063431ab7bab5e6cc27d6ac"
+const apiKey = "cd89f6986063431ab7bab5e6cc27d6ac";
 
 const getGames = async () => {
     try {
@@ -9,7 +9,7 @@ const getGames = async () => {
 
         const resived = await apiCall.json();
 
-        const games = resived.results
+        const games = resived.results;
 
         gamesContainer.innerHTML = "";
 
@@ -19,17 +19,20 @@ const getGames = async () => {
                 break;
             }
 
-            gamesContainer.innerHTML += `<div class="game">
-                                            <h3>${games[i].name}</h3>
-                                            <p>Rating: ${games[i].rating}</p>
-                                            <p>Amount of tags: ${games[i].tags.length}</p>
-                                         </div>`
-        }
+            gamesContainer.innerHTML +=
+                `<div class="game">
+                    <h3>${games[i].name}</h3>
+                    <p>Rating: ${games[i].rating}</p>
+                    <p>Amount of tags: ${games[i].tags.length}</p>
+                </div>`
+        };
     }
+
     catch (error) {
-        console.log("error accurred", error)
+        console.log("error accurred", error);
         gamesContainer.innerHTML = "😒 An error occurred, we can unfortunately not offer the service";
     }
+
     finally {
         console.log("getGames function done");
     }
