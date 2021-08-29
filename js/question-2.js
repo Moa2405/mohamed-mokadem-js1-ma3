@@ -11,8 +11,7 @@ const getGames = async () => {
 
         const games = resived.results
 
-        gamesContainer.innerHTML = ""
-
+        gamesContainer.innerHTML = "";
 
         for (let i = 0; i < games.length; i++) {
 
@@ -29,11 +28,12 @@ const getGames = async () => {
     }
     catch (error) {
         console.log("error accurred", error)
-        gamesContainer.innerHTML = "😒 An error occurred, we can unfortunately not offer the service"
+        gamesContainer.innerHTML = "😒 An error occurred, we can unfortunately not offer the service";
     }
     finally {
-        console.log("Async function done")
+        console.log("getGames function done");
     }
 }
 
 getGames();
+
